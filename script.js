@@ -1,20 +1,20 @@
 const questions = [
-            "What was your first impression of the book's opening chapter?",
-            "Tsitsi believed that marriage is something to be initiated by the man. It would happen when he is ready. Do you agree?",
-            "Tsitsi was traditionally married to Zvobgo, but since they hadn’t had a church wedding, she still saw them as “living in sin.” Is a church wedding more important than a traditional one?",
-            "A quote in the book read “the greater the hard work, the greater the success.” With the advent of smart work, do you think this quote still holds water? Because we have all seen people who work hard but have nothing to show for it.",
-            "Does religion truly make people morally upright, or does it merely create fear that controls people’s behavior?",
-            "Tsitsi complained of the decline in their sex life to Chiedza, who suggested Zvobgo might be cheating. Tsitsi disagreed, but Chiedza said, “And why not? If he could do it to her (his first wife), he can do it to you.” Does karma exist? Does what goes around actually come around?",
-            "Did Tsitsi have any right to judge Chiedza for making money off rich older men, given that she herself married someone older than her mother for similar reasons?",
-            "How far can you go in helping a friend? Even when the circumstances clash with your values and beliefs as in the case of Tsitsi accompanying Chiedza to have an abortion.",
-            "Does juju work? As we can see in the book, Tsitsi used juju and got her happily ever after.",
-            "There’s a recent video of a midwife advising a girl who wanted an abortion to keep the baby. After giving birth, the girl left the baby for the midwife and disappeared. Relating this to Chiedza’s three abortions in the book, should women be “advised” to keep pregnancies they do not want?",
-            "Feminism is one of the main themes of the book. Do you think it accurately depicts feminism, or does it present a different idea of what women’s empowerment means?",
-            "A boy trying to shame Chiedza in class quoted that marriage is often the surest way out of poverty for many poorer women. Is that true?",
-            "Tsitsi blamed the government for her unemployment and meager jobs, saying it drove her to marry Zvobgo. Did she really have no other choice?",
-            "Who was your favorite character?",
-            "Would you recommend this book to others? Why or why not?"
-        ];
+    "How does Lewa’s initial mindset and situation shape the decisions she makes throughout the story?",
+    "What role does Sisi play in Lewa’s life? Is Sisi a villain, a mentor, or both?",
+    "Sho is a Babalawo and also part of the luxury world Lewa enters. How does his dual role affect your perception of him and the relationship he has with Lewa?",
+    "The novel uses ritual and spiritual elements (oaths, traditional practice) alongside modern luxury. What is the significance of blending these two worlds?",
+    "How does the setting (Lagos, with its glamour and grit) function as a character in its own right?",
+    "In what ways do the sugar-daddy transactions reflect broader themes of class, power and commodification?",
+    "Can Lewa’s choice to participate in the system be viewed as agency or entrapment? Or a mixture of both?",
+    "How does the author portray desire and pleasure, especially from a female protagonist’s perspective?",
+    "How do you respond to characters who are morally grey (neither purely good nor purely evil)? Does this enhance or complicate the reading experience?",
+    "What do you think the novel says about the cost of “escaping poverty” in a system that demands more than it promises?",
+    "There are moments of betrayal, loyalty and shifting allegiances. Which betrayal hit you the hardest and why?",
+    "The book ends (without major spoilers) with a sense of transformation. What does freedom look like for Lewa? Is it something she attains, or something she must keep fighting for?",
+    "If you were advising Lewa, at a key turning point in the story, what would you tell her and why?",
+    "The author uses sensual, erotic scenes as part of the narrative. How do you feel about the role of erotica in telling a story with serious themes?",
+    "What aspects of the story stayed with you after finishing the book? Why?"
+];
 
         let currentIndex = 0;
         const carouselTrack = document.getElementById('carouselTrack');
