@@ -443,15 +443,12 @@ footer {
   height: 100%;
 }
 
-.book-card:hover {
-}
-
 .book-cover-container {
   width: 100%;
   height: 400px;
   overflow: hidden;
   position: relative;
-  background: #f7fafc; /* Fallback */
+  background: #f7fafc;
 }
 
 .book-cover-blur {
