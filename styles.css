@@ -1,17 +1,49 @@
-* {
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;0,800;1,400&display=swap");
+
+/* CSS Reset */
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow-x: hidden;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, sans-serif;
   background: #e2dfd0;
   min-height: 100vh;
   color: black;
   overflow-x: hidden;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.logo {
+  font-family: "Playfair Display", serif;
+  overflow-wrap: break-word;
 }
 
 /* Header */
@@ -43,6 +75,7 @@ header {
 
 /* Hero Section */
 .hero {
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 3rem 2rem;
@@ -66,8 +99,14 @@ header {
 .hero h1 {
   font-size: 3rem;
   color: white;
-  font-weight: 800;
-  /* text-shadow removed */
+}
+
+.hero .author {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.9);
+  margin-top: -2rem; /* Pull closer to H1 if needed, or adjust padding */
+  margin-bottom: 2rem;
 }
 
 .hero-content {
@@ -158,6 +197,7 @@ header {
 .carousel-section {
   padding: 4rem 2rem;
   max-width: 1400px;
+  width: 100%;
   margin: 0 auto;
 }
 
