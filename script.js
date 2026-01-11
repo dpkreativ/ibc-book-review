@@ -54,6 +54,13 @@ function setupCarouselNavigation() {
     if (indicator) {
       indicator.textContent = `${index + 1} / ${cards.length}`;
     }
+
+    if (prevBtn) {
+      prevBtn.style.display = index === 0 ? "none" : "flex";
+    }
+    if (nextBtn) {
+      nextBtn.style.display = index === cards.length - 1 ? "none" : "flex";
+    }
   }
 
   if (prevBtn) {

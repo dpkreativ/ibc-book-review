@@ -73,6 +73,28 @@ header {
   }
 }
 
+/* Back Button */
+.back-arrow {
+  text-decoration: none;
+  font-size: 2rem;
+  color: #2d3748;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: white;
+  transition: all 0.3s ease;
+  z-index: 100;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.back-arrow:hover {
+  transform: translateX(-5px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
 /* Hero Section */
 .hero {
   width: 100%;
