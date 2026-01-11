@@ -171,7 +171,7 @@ header {
 
 .carousel-container {
   position: relative;
-  height: 450px;
+  height: 440px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -348,10 +348,11 @@ footer {
   }
 
   .carousel-container {
-    height: 400px;
+    height: 320px;
   }
 
   .carousel-title {
+    font-size: 1.5rem;
     margin-bottom: 0;
   }
 
