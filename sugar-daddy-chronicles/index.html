@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>Sugar Daddy Chronicles: Lewa Book Review</title>
+    <style>
+      body {
+        background: url("book_photo.jpg") no-repeat center center fixed;
+        background-size: cover;
+        color: white;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(15px);
+        z-index: -1;
+      }
+
+      .logo {
+        color: #ff9a9e;
+      }
+
+      .question-number {
+        background: linear-gradient(
+          135deg,
+          #ff9a9e 0%,
+          #fecfef 99%,
+          #fecfef 100%
+        );
+        color: #594a4e;
+      }
+
+      .nav-button {
+        color: #ff9a9e;
+      }
+
+      .nav-button:hover {
+        background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+        color: white;
+      }
+
+      .book-image {
+        background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="floating-shape shape-1"></div>
+    <div class="floating-shape shape-2"></div>
+    <div class="floating-shape shape-3"></div>
+
+    <header>
+      <!-- Link back to home -->
+      <a href="../index.html" style="text-decoration: none">
+        <img class="logo" src="../tibc_logo.png" alt="Iroko Logo" />
+      </a>
+    </header>
+
+    <section class="hero">
+      <h1>Sugar Daddy Chronicles: Lewa <br />by Tomilola Coco Adeyemo</h1>
+      <div class="hero-content">
+        <p>
+          When Sisi brought me to Lagos for work, I didn't expect to have sex
+          for money or to sexually debase myself for the pleasure of Nigeria's
+          corrupt/morally bankrupt elite. But I realized early on that I don't
+          really mind it - it is a journey I am willing to take to reach the
+          destination of the life I want. However, the journey gets bumpy
+          quickly; my secret plans and growing affection for Sisi's right-hand
+          man and in-house diviner, Dimeji, bring me into a headlong collision
+          with her. There's also the effect of the oath I swore before the
+          goddess of the graveyard, which will haunt me to death. I try to fight
+          it, but one thing's for sure, I'm not likely to leave this place
+          alive.
+        </p>
+        <div class="book-image-container">
+          <div class="book-image">
+            <img
+              src="book_photo.jpg"
+              alt="Book Cover"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 20px;
+              "
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="carousel-section">
+      <h2 class="carousel-title">Review Questions</h2>
+
+      <div class="carousel-container">
+        <div class="carousel-track" id="carouselTrack"></div>
+      </div>
+
+      <div class="carousel-nav">
+        <button class="nav-button" id="prevBtn" aria-label="Previous question">
+          ←
+        </button>
+        <button class="nav-button" id="nextBtn" aria-label="Next question">
+          →
+        </button>
+      </div>
+
+      <div class="progress-indicator" id="progressIndicator"></div>
+    </section>
+
+    <footer>
+      <img class="footer-logo" src="../tibc_logo.png" />
+      <p class="footer-text">
+        © 2025 The Iroko Book Circle. All rights reserved.
+      </p>
+    </footer>
+
+    <script>
+      const questions = [
+        "How does Lewa's initial mindset and situation shape the decisions she makes throughout the story?",
+        "What role does Sisi play in Lewa's life? Is Sisi a villain, a mentor, or both?",
+        "Sho is a Babalawo and also part of the luxury world Lewa enters. How does his dual role affect your perception of him and the relationship he has with Lewa?",
+        "The novel uses ritual and spiritual elements (oaths, traditional practice) alongside modern luxury. What is the significance of blending these two worlds?",
+        "How does the setting (Lagos, with its glamour and grit) function as a character in its own right?",
+        "In what ways do the sugar-daddy transactions reflect broader themes of class, power and commodification?",
+        "Can Lewa's choice to participate in the system be viewed as agency or entrapment? Or a mixture of both?",
+        "How does the author portray desire and pleasure, especially from a female protagonist's perspective?",
+        "How do you respond to characters who are morally grey (neither purely good nor purely evil)? Does this enhance or complicate the reading experience?",
+        "What do you think the novel says about the cost of “escaping poverty” in a system that demands more than it promises?",
+        "There are moments of betrayal, loyalty and shifting allegiances. Which betrayal hit you the hardest and why?",
+        "The book ends (without major spoilers) with a sense of transformation. What does freedom look like for Lewa? Is it something she attains, or something she must keep fighting for?",
+        "If you were advising Lewa, at a key turning point in the story, what would you tell her and why?",
+        "The author uses sensual, erotic scenes as part of the narrative. How do you feel about the role of erotica in telling a story with serious themes?",
+        "What aspects of the story stayed with you after finishing the book? Why?",
+      ];
+    </script>
+    <script src="../script.js"></script>
+  </body>
+</html>

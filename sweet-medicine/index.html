@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>Sweet Medicine: Book Review</title>
+    <style>
+      /* Page Specific Theme: Green/Nature */
+      body {
+        background: url("book_photo.jpg") no-repeat center center fixed;
+        background-size: cover;
+        color: white;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(15px);
+        z-index: -1;
+      }
+
+      .logo {
+        color: #2f855a;
+      }
+
+      .question-number {
+        background: linear-gradient(135deg, #a8e063 0%, #56ab2f 100%);
+        color: white;
+      }
+
+      .nav-button {
+        color: #2f855a;
+      }
+
+      .nav-button:hover {
+        background: linear-gradient(135deg, #a8e063 0%, #56ab2f 100%);
+        color: white;
+      }
+
+      .book-image {
+        background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+        color: white;
+      }
+
+      .hero h1 {
+        text-shadow: 0 2px 10px rgba(0, 50, 0, 0.3);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="floating-shape shape-1"></div>
+    <div class="floating-shape shape-2"></div>
+    <div class="floating-shape shape-3"></div>
+
+    <header>
+      <a href="../index.html" style="text-decoration: none">
+        <img class="logo" src="../tibc_logo.png" alt="Iroko Logo" />
+      </a>
+    </header>
+
+    <section class="hero">
+      <h1>Sweet Medicine <br />by Panashe Chigumadzi</h1>
+      <div class="hero-content">
+        <p>
+          Set in Harare at the height of Zimbabwe's economic woes in 2008, Sweet
+          Medicine tells the story of Tsitsi, a young woman who seeks agency and
+          financial security through a clear-eyed (some might say cynical)
+          reliance on patriarchy and the spiritual world. It explores the
+          breakdown of the middle class, the turn to traditional/spiritual
+          solutions for modern problems, and the lengths one will go to survive.
+        </p>
+        <div class="book-image-container">
+          <div class="book-image">
+            <!-- Placeholder since we might not have a specific image file yet -->
+            Sweet Medicine Cover
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="carousel-section">
+      <h2 class="carousel-title">Review Questions</h2>
+
+      <div class="carousel-container">
+        <div class="carousel-track" id="carouselTrack"></div>
+      </div>
+
+      <div class="carousel-nav">
+        <button class="nav-button" id="prevBtn" aria-label="Previous question">
+          ←
+        </button>
+        <button class="nav-button" id="nextBtn" aria-label="Next question">
+          →
+        </button>
+      </div>
+
+      <div class="progress-indicator" id="progressIndicator"></div>
+    </section>
+
+    <footer>
+      <img class="footer-logo" src="../tibc_logo.png" />
+      <p class="footer-text">
+        © 2025 The Iroko Book Circle. All rights reserved.
+      </p>
+    </footer>
+
+    <script>
+      const questions = [
+        "In the context of Zimbabwe's economic collapse, is Tsitsi’s reliance on 'Sweet Medicine' (spiritual intervention) a sign of desperation or resourcefulness?",
+        "How does the novel critique or explore the role of the church and traditional beliefs in modern Zimbabwean society?",
+        "Compare Tsitsi's journey to Lewa's in 'Sugar Daddy Chronicles'. Both use their bodies and relationships for security. How do their justifications differ?",
+        "What does the book suggest about the fragility of the middle class in times of national crisis?",
+        "How is the relationship between education and success portrayed? Does the book suggest that education failed Tsitsi?",
+        "Discuss the role of feminism in the novel. Is Tsitsi a feminist character in her own way, or does she uphold patriarchal structures?",
+        "The title 'Sweet Medicine' suggests a cure that is palatable. What is the 'medicine' in the story, and is it truly sweet?",
+        "How does the author use the setting of Harare to create atmosphere and tension?",
+        "What role do the secondary female characters (like her mother or friends) play in shaping Tsitsi’s decisions?",
+        "Did the ending satisfy you? What does it say about the sustainability of the choices Tsitsi made?",
+      ];
+    </script>
+    <script src="../script.js"></script>
+  </body>
+</html>

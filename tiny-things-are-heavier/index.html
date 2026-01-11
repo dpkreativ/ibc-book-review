@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>Tiny Things Are Heavier: Book Review</title>
+    <style>
+      /* Page Specific Theme: Deep Purple/Mysterious */
+      body {
+        background: url("book_photo.jpg") no-repeat center center fixed;
+        background-size: cover;
+        color: white;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(15px);
+        z-index: -1;
+      }
+
+      .question-number {
+        background: linear-gradient(135deg, black 0%, black 100%);
+        color: white;
+      }
+
+      .nav-button {
+        color: black;
+      }
+
+      .nav-button:hover {
+        background: linear-gradient(135deg, black 0%, black 100%);
+        color: white;
+      }
+
+      .book-image {
+        background: linear-gradient(135deg, black 0%, black 100%);
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="floating-shape shape-1"></div>
+    <div class="floating-shape shape-2"></div>
+    <div class="floating-shape shape-3"></div>
+
+    <header>
+      <a href="../index.html" style="text-decoration: none">
+        <img
+          class="logo"
+          src="../tibc_logo.png"
+          alt="The Iroko Book Circle Logo"
+        />
+      </a>
+    </header>
+
+    <section class="hero">
+      <h1>Tiny Things Are Heavier <br />by Esther Ifesinachi Okonkwo</h1>
+      <div class="hero-content">
+        <p>
+          Sommy, a Nigerian woman, comes to the United States for graduate
+          school two weeks after her brother, Mezie, attempts suicide.
+          <br /><br />
+          Plagued by the guilt of leaving Mezie behind, Sommy struggles to fit
+          into her new life as a student and immigrant. Lonely and homesick, she
+          soon enters a complicated relationship with her boisterous Nigerian
+          roommate, Bayo, a relationship that plummets into deceit when Sommy
+          falls for Bryan, a biracial American whose estranged Nigerian father
+          left America immediately after Bryan’s birth.
+          <br /><br />
+          During summer break Sommy and Bryan visit Lagos and meet a shocking
+          and unexpected event exposes the cracks in Sommy’s relationships and
+          forces her to confront her notions of self and familial love.
+        </p>
+        <div class="book-image-container">
+          <div class="book-image">
+            <img
+              src="book_photo.jpg"
+              alt="Tiny Things Are Heavier Cover"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 20px;
+              "
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="carousel-section">
+      <h2 class="carousel-title">Review Questions</h2>
+
+      <div class="carousel-container">
+        <div class="carousel-track" id="carouselTrack"></div>
+      </div>
+
+      <div class="carousel-nav">
+        <button class="nav-button" id="prevBtn" aria-label="Previous question">
+          ←
+        </button>
+        <button class="nav-button" id="nextBtn" aria-label="Next question">
+          →
+        </button>
+      </div>
+
+      <div class="progress-indicator" id="progressIndicator"></div>
+    </section>
+
+    <footer>
+      <img class="footer-logo" src="../tibc_logo.png" />
+      <p class="footer-text">
+        © 2025 The Iroko Book Circle. All rights reserved.
+      </p>
+    </footer>
+
+    <script>
+      const questions = [
+        "Which Character stood out for you in the book?",
+        "When Sommy got involved with Bayo, do you think it was because she saw similarities of her brother's personality in him or was it a case of finding comfort in a foreign land?",
+        "Bryan and Sommy's Love story? What do you think about Their relationship?",
+        "Mezie's character, Do you think him a selfish person or just a victim?",
+        "What do you think about Sommy's family dynamics?",
+        "How did Sommy and Mezie's relationship make you feel?",
+        "What themes /message did you get from the book?",
+      ];
+    </script>
+    <script src="../script.js"></script>
+  </body>
+</html>
