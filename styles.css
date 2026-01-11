@@ -387,6 +387,21 @@ footer {
 }
 
 /* Responsive Design */
+@media (max-width: 375px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .books-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .book-cover-container {
+    height: 350px;
+  }
+}
+
 @media (max-width: 768px) {
   /* .hero rules moved to base styles for mobile-first */
 
@@ -488,7 +503,7 @@ footer {
 
 .books-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   padding: 2rem 0;
 }
