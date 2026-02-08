@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="../tibc_logo.png" />
+    <title>Kill Me Quick: Book Review</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;0,800;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style type="text/tailwindcss">
+      @theme {
+        --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, "Helvetica Neue", Arial, sans-serif;
+        --font-serif: "Playfair Display", serif;
+      }
+
+      body {
+        font-family: var(--font-sans);
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: var(--font-serif);
+      }
+
+      /* Custom animations */
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+      @keyframes floatRandom {
+        0%,
+        100% {
+          transform: translate(0, 0) rotate(0deg);
+        }
+        25% {
+          transform: translate(20px, -20px) rotate(90deg);
+        }
+        50% {
+          transform: translate(-20px, 20px) rotate(180deg);
+        }
+        75% {
+          transform: translate(20px, 20px) rotate(270deg);
+        }
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes slideInRight {
+        from {
+          opacity: 0;
+          transform: translateX(50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      .animate-float {
+        animation: float 3s ease-in-out infinite;
+      }
+      .animate-float-random {
+        animation: floatRandom 20s infinite ease-in-out;
+      }
+      .animate-fade-in {
+        animation: fadeIn 1s ease-in;
+      }
+      .animate-slide-in-right {
+        animation: slideInRight 1s ease-out;
+      }
+
+      /* Dynamic Question Card Styles */
+      .question-card {
+        @apply absolute w-[600px] max-w-[90%] bg-white rounded-3xl p-12 transition-all duration-600 ease-[cubic-bezier(0.4,0,0.2,1)] opacity-0 pointer-events-none text-left;
+      }
+      .question-card.active {
+        @apply opacity-100 transform translate-x-0 scale-100 z-10 pointer-events-auto;
+      }
+      .question-card.prev {
+        @apply opacity-30 transform -translate-x-[120%] scale-80 blur-[4px] z-0;
+      }
+      .question-card.next {
+        @apply opacity-30 transform translate-x-[120%] scale-80 blur-[4px] z-0;
+      }
+
+      /* Theme specific gradients for this book */
+      .question-number {
+        @apply inline-block bg-gradient-to-br from-[#ff3b3b] to-[#8b0000] text-white py-2 px-4 rounded-full text-sm font-semibold mb-6 shadow-md;
+      }
+
+      .question-text {
+        @apply text-3xl font-bold text-gray-800 mb-6 leading-snug;
+      }
+
+      /* Mobile adjustments for dynamic content */
+      @media (max-width: 768px) {
+        .question-card {
+          @apply p-8 w-[90%];
+        }
+        .question-text {
+          @apply text-base font-medium;
+        }
+      }
+    </style>
+  </head>
+  <body
+    class="text-white min-h-screen relative overflow-x-hidden antialiased leading-relaxed"
+  >
+    <!-- Background Image with Overlay -->
+    <div class="fixed inset-0 z-[-1]">
+      <div
+        class="absolute inset-0 bg-[url('book_photo.jpg')] bg-fixed bg-center bg-cover"
+      ></div>
+      <div class="absolute inset-0 bg-black/60 backdrop-blur-[15px]"></div>
+    </div>
+
+    <!-- Floating Shapes -->
+    <div
+      class="fixed rounded-full opacity-10 pointer-events-none animate-float-random w-[100px] h-[100px] bg-white top-[10%] left-[5%]"
+    ></div>
+    <div
+      class="fixed rounded-full opacity-10 pointer-events-none animate-float-random w-[150px] h-[150px] bg-white bottom-[10%] right-[10%] [animation-delay:5s]"
+    ></div>
+    <div
+      class="fixed rounded-full opacity-10 pointer-events-none animate-float-random w-[80px] h-[80px] bg-white top-[50%] right-[5%] [animation-delay:10s]"
+    ></div>
+
+    <header class="flex justify-start items-center py-6 px-8 relative z-10">
+      <!-- Back Arrow -->
+      <a
+        href="../"
+        class="flex items-center justify-center w-[50px] h-[50px] rounded-full bg-white text-[#1f1f1f] text-2xl no-underline shadow-md transition-all duration-300 ease-in-out hover:-translate-x-1 hover:shadow-lg"
+        aria-label="Back to Home"
+      >
+        ←
+      </a>
+
+      <!-- Logo -->
+      <a href="../" class="ml-16 block text-[#b91c1c]">
+        <img
+          class="p-2 rounded-2xl bg-white w-[90px] animate-float"
+          src="../tibc_logo.png"
+          alt="The Iroko Book Circle Logo"
+        />
+      </a>
+    </header>
+
+    <section
+      class="max-w-[1200px] mx-auto py-12 px-8 grid gap-12 items-center animate-fade-in grid-cols-1 md:grid-cols-2 text-center md:text-left"
+    >
+      <div class="md:order-1 order-2">
+        <h1
+          class="text-5xl md:text-5xl text-white mb-0 font-serif drop-shadow-[0_2px_10px_rgba(0,0,0,0.35)]"
+        >
+          Kill Me Quick
+        </h1>
+        <h2
+          class="text-2xl font-normal italic text-white/90 mb-8 mt-2 -mt-2 font-serif"
+        >
+          <span class="italic">by</span> Meja Mwangi
+        </h2>
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center text-center md:text-left"
+        >
+          <p class="text-white/95 leading-relaxed mb-6 md:mb-0 md:col-span-2">
+            This fast-paced novel follows two young men struggling to survive
+            in Nairobi after failing to find employment. As desperation grows,
+            their moral boundaries are tested. With gritty realism and sharp
+            dialogue, Meja Mwangi captures the harsh realities of urban poverty,
+            disillusionment, and lost dreams.
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="flex justify-center items-center animate-slide-in-right md:justify-end md:order-2 order-1"
+      >
+        <div
+          class="w-full max-w-[350px] h-[500px] bg-gradient-to-br from-[#ff3b3b] to-[#450a0a] rounded-[20px] my-8 mx-auto flex items-center justify-center text-2xl text-white font-bold transition-transform duration-500 ease-in-out hover:scale-105"
+        >
+          <img
+            src="book_photo.jpg"
+            alt="Kill Me Quick Cover"
+            class="w-full h-full object-cover rounded-[20px]"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 px-8 max-w-[1400px] mx-auto w-full">
+      <h2 class="text-center text-4xl text-white mb-12 font-bold font-serif">
+        Review Questions
+      </h2>
+
+      <div
+        class="relative h-[440px] flex items-center justify-center perspective-[1000px]"
+      >
+        <div
+          class="relative w-full h-full flex items-center justify-center"
+          id="carouselTrack"
+        ></div>
+      </div>
+
+      <div class="flex justify-center gap-4 py-12">
+        <button
+          class="w-[60px] h-[60px] rounded-full bg-white border-none cursor-pointer flex items-center justify-center text-2xl transition-all duration-300 ease-in-out text-[#b91c1c] hover:scale-110 hover:bg-gradient-to-br hover:from-[#ff3b3b] hover:to-[#8b0000] hover:text-white active:scale-95"
+          id="prevBtn"
+          aria-label="Previous question"
+        >
+          ←
+        </button>
+        <button
+          class="w-[60px] h-[60px] rounded-full bg-white border-none cursor-pointer flex items-center justify-center text-2xl transition-all duration-300 ease-in-out text-[#b91c1c] hover:scale-110 hover:bg-gradient-to-br hover:from-[#ff3b3b] hover:to-[#8b0000] hover:text-white active:scale-95"
+          id="nextBtn"
+          aria-label="Next question"
+        >
+          →
+        </button>
+      </div>
+
+      <div
+        class="text-center text-white text-lg mt-6 font-medium"
+        id="progressIndicator"
+      ></div>
+    </section>
+
+    <footer class="bg-black/20 backdrop-blur-md p-8 mt-16 text-center">
+      <div
+        class="inline-flex items-center justify-center w-10 h-10 bg-white rounded-lg font-bold text-[#b91c1c] mb-4"
+      >
+        <img
+          class="w-10 h-10 bg-white rounded-lg inline-flex items-center justify-center font-bold text-[#b91c1c]"
+          src="../tibc_logo.png"
+          alt="The Iroko Book Circle Logo"
+        />
+      </div>
+      <p class="text-white/90 text-sm">
+        © 2025 The Iroko Book Circle. All rights reserved.
+      </p>
+    </footer>
+
+    <script>
+      const questions = [
+        "Talk about the character, Affande.",
+        "Talk about the character, Ngigi.",
+        "Talk about the character, Maine.",
+        "Talk about the character, Meja.",
+        "Talk about the character, Sara.",
+        "Talk about the character, Major.",
+        "Talk about the character, Boi.",
+        "Let's discuss the classification into mainstreet and back street.",
+        "Talk about the character, Razor and the gang.",
+        "Can we deduce the reasons behind the book title \"Kill me Quick\"",
+        "What themes can be drawn from the book \"Kill me Quick?\"",
+        "Let's talk about life at Shanty town.",
+        "How would you rate the novel?",
+      ];
+    </script>
+
+    <script src="../script.js"></script>
+  </body>
+</html>
