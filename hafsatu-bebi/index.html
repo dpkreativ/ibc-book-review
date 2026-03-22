@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="../tibc_logo.png" />
+    <title>Hafsatu Bebi: Book Review</title>
+    <meta
+      name="description"
+      content="Review of Fatima Bala's Hafsatu Bebi, a poignant multigenerational narrative about identity, secrets, and resilience in Northern Nigeria."
+    />
+    <meta
+      name="keywords"
+      content="Hafsatu Bebi review, Fatima Bala, Hafsatu Gaya, Northern Nigeria, Abuja, Muslim women, identity, family secrets, book club questions, Iroko Book Circle"
+    />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:title" content="Hafsatu Bebi: Book Review" />
+    <meta
+      property="og:description"
+      content="A review of Fatima Bala's novel set in Abuja, with discussion questions."
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="The Iroko Book Circle" />
+    <meta property="og:image" content="book_photo.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Hafsatu Bebi: Book Review" />
+    <meta
+      name="twitter:description"
+      content="Fatima Bala's Hafsatu Bebi review with book club discussion questions."
+    />
+    <meta name="twitter:image" content="book_photo.jpg" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;0,800;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style type="text/tailwindcss">
+      @theme {
+        --font-sans:
+          "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif;
+        --font-serif: "Playfair Display", serif;
+      }
+
+      body {
+        font-family: var(--font-sans);
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: var(--font-serif);
+      }
+
+      /* Custom animations */
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+      @keyframes floatRandom {
+        0%,
+        100% {
+          transform: translate(0, 0) rotate(0deg);
+        }
+        25% {
+          transform: translate(20px, -20px) rotate(90deg);
+        }
+        50% {
+          transform: translate(-20px, 20px) rotate(180deg);
+        }
+        75% {
+          transform: translate(20px, 20px) rotate(270deg);
+        }
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes slideInRight {
+        from {
+          opacity: 0;
+          transform: translateX(50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      .animate-float {
+        animation: float 3s ease-in-out infinite;
+      }
+      .animate-float-random {
+        animation: floatRandom 20s infinite ease-in-out;
+      }
+      .animate-fade-in {
+        animation: fadeIn 1s ease-in;
+      }
+      .animate-slide-in-right {
+        animation: slideInRight 1s ease-out;
+      }
+
+      /* Dynamic Question Card Styles */
+      .question-card {
+        @apply absolute w-[600px] max-w-[90%] bg-white rounded-3xl p-12 transition-all duration-600 ease-[cubic-bezier(0.4,0,0.2,1)] opacity-0 pointer-events-none text-left shadow-2xl;
+      }
+      .question-card.active {
+        @apply opacity-100 transform translate-x-0 scale-100 z-10 pointer-events-auto;
+      }
+      .question-card.prev {
+        @apply opacity-30 transform -translate-x-[120%] scale-80 blur-[4px] z-0;
+      }
+      .question-card.next {
+        @apply opacity-30 transform translate-x-[120%] scale-80 blur-[4px] z-0;
+      }
+
+      /* Theme specific gradients — deep emerald/teal for Hafsatu Bebi */
+      .question-number {
+        @apply inline-block bg-gradient-to-br from-[#059669] to-[#064e3b] text-white py-2 px-4 rounded-full text-sm font-semibold mb-6 shadow-md;
+      }
+
+      .question-text {
+        @apply text-xl md:text-2xl font-bold text-gray-800 mb-6 leading-snug;
+      }
+
+      /* Mobile adjustments for dynamic content */
+      @media (max-width: 768px) {
+        .question-card {
+          @apply p-8 w-[90%];
+        }
+        .question-text {
+          @apply text-base font-medium;
+        }
+      }
+    </style>
+  </head>
+  <body
+    class="text-white min-h-screen relative overflow-x-hidden antialiased leading-relaxed"
+  >
+    <!-- Background Image with Overlay -->
+    <div class="fixed inset-0 z-[-1]">
+      <div
+        class="absolute inset-0 bg-[url('book_photo.jpg')] bg-fixed bg-center bg-cover"
+      ></div>
+      <div class="absolute inset-0 bg-[#064e3b]/80 backdrop-blur-[15px]"></div>
+    </div>
+
+    <!-- Floating Shapes -->
+    <div
+      class="fixed rounded-full opacity-10 pointer-events-none animate-float-random w-[100px] h-[100px] bg-emerald-400 top-[10%] left-[5%]"
+    ></div>
+    <div
+      class="fixed rounded-full opacity-10 pointer-events-none animate-float-random w-[150px] h-[150px] bg-teal-300 bottom-[10%] right-[10%] [animation-delay:5s]"
+    ></div>
+    <div
+      class="fixed rounded-full opacity-10 pointer-events-none animate-float-random w-[80px] h-[80px] bg-lime-400 top-[50%] right-[5%] [animation-delay:10s]"
+    ></div>
+
+    <header class="flex justify-start items-center py-6 px-8 relative z-10">
+      <!-- Back Arrow -->
+      <a
+        href="../"
+        class="flex items-center justify-center w-[50px] h-[50px] rounded-full bg-white text-[#1f1f1f] text-2xl no-underline shadow-md transition-all duration-300 ease-in-out hover:-translate-x-1 hover:shadow-lg"
+        aria-label="Back to Home"
+      >
+        ←
+      </a>
+
+      <!-- Logo -->
+      <a href="../" class="ml-16 block text-emerald-400">
+        <img
+          class="p-2 rounded-2xl bg-white w-[90px] animate-float"
+          src="../tibc_logo.png"
+          alt="The Iroko Book Circle Logo"
+        />
+      </a>
+    </header>
+
+    <section
+      class="max-w-[1200px] mx-auto py-12 px-8 grid gap-12 items-center animate-fade-in grid-cols-1 md:grid-cols-2 text-center md:text-left"
+    >
+      <div class="md:order-1 order-2">
+        <h1
+          class="text-5xl md:text-6xl text-white mb-2 font-serif drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]"
+        >
+          Hafsatu Bebi
+        </h1>
+        <h2 class="text-2xl font-normal italic text-lime-400 mb-8 font-serif">
+          <span class="italic text-white/80">by</span> Fatima Bala
+        </h2>
+
+        <div
+          class="grid grid-cols-1 gap-8 items-center text-center md:text-left"
+        >
+          <p class="text-white/95 leading-relaxed text-lg mb-6">
+            Hafsatu Bebi by Fatima Bala is a novel about Hafsatu Gaya, a
+            22-year-old fashion entrepreneur in Abuja whose seemingly perfect
+            life unravels after a reckless, fateful decision. The story, told
+            across two timelines (late 1990s and present), explores themes of
+            identity, deeply buried secrets, and the contrast between public
+            personas and private truths. It highlights her journey of navigating
+            complex family dynamics, maternal pressure, and a long-term
+            relationship, ultimately revealing a, poignant, multigenerational
+            narrative about love and resilience.
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="flex justify-center items-center animate-slide-in-right md:justify-end md:order-2 order-1"
+      >
+        <div
+          class="w-full max-w-[400px] h-auto shadow-2xl rounded-[20px] my-8 mx-auto flex items-center justify-center transition-transform duration-500 ease-in-out hover:scale-105"
+        >
+          <img
+            src="book_photo.jpg"
+            alt="Hafsatu Bebi Cover"
+            class="w-full h-full object-cover rounded-[20px] shadow-2xl"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 px-8 max-w-[1400px] mx-auto w-full">
+      <h2 class="text-center text-4xl text-white mb-16 font-bold font-serif">
+        Review Questions
+      </h2>
+
+      <div
+        class="relative h-[480px] flex items-center justify-center perspective-[1000px]"
+      >
+        <div
+          class="relative w-full h-full flex items-center justify-center"
+          id="carouselTrack"
+        ></div>
+      </div>
+
+      <div class="flex justify-center gap-6 py-12">
+        <button
+          class="w-[60px] h-[60px] rounded-full bg-white border-none cursor-pointer flex items-center justify-center text-2xl transition-all duration-300 ease-in-out text-emerald-900 hover:scale-110 hover:bg-lime-500 hover:text-white active:scale-95 shadow-xl"
+          id="prevBtn"
+          aria-label="Previous question"
+        >
+          ←
+        </button>
+        <button
+          class="w-[60px] h-[60px] rounded-full bg-white border-none cursor-pointer flex items-center justify-center text-2xl transition-all duration-300 ease-in-out text-emerald-900 hover:scale-110 hover:bg-lime-500 hover:text-white active:scale-95 shadow-xl"
+          id="nextBtn"
+          aria-label="Next question"
+        >
+          →
+        </button>
+      </div>
+
+      <div
+        class="text-center text-white text-lg mt-6 font-medium"
+        id="progressIndicator"
+      ></div>
+    </section>
+
+    <footer
+      class="bg-black/40 backdrop-blur-md p-10 mt-16 text-center border-t border-white/10"
+    >
+      <div
+        class="inline-flex items-center justify-center w-12 h-12 bg-white rounded-xl mb-6 shadow-lg"
+      >
+        <img
+          class="w-10 h-10 object-contain"
+          src="../tibc_logo.png"
+          alt="The Iroko Book Circle Logo"
+        />
+      </div>
+      <p class="text-white/70 text-sm tracking-widest uppercase">
+        © 2026 The Iroko Book Circle. All rights reserved.
+      </p>
+    </footer>
+
+    <script>
+      const questions = [
+        "What do you think of Hafsatu?",
+        "Alhaji Ringim and Ibrahim were both Muslims, yet they treated the women in their lives very differently. Does religion truly affect the way people act and think, or is it all just our personal choices?",
+        "What are your thoughts on Islamic religion and how it affects women?",
+        "Zuwaira and Ibrahim kept Hafsatu’s true paternity a secret for over two decades, out of love and protection. Do you think they made the right call? Should they have told Hafsatu about the circumstances surrounding her birth?",
+        "What was your impression of Bashir?",
+        "Zuwaira and Ibrahim’s love story was interrupted, survived abuse, displacements and even secrets. What do you think held them together?",
+        "Have you ever mistakenly made out with a family member?",
+        "Little Abu, who became Sadiq, found his mother’s dead body as a four-year-old and lost the ability to speak from trauma. He was also a constant recipient of his father’s and teachers’ abuse. How did that childhood wound show up in the adult Sadiq we saw in the book?",
+        "The author said this book contains every kind of love. Romantic love, friendship, parental love, and more. Which love story in the book moved you the most, and why?",
+        "What’s your impression of the younger Zuwaira and her bravery for leaving Alhaji’s house?",
+        "If you were in Hafsatu’s shoes, how would you react if you find out one of your parent is not really your parent?",
+        "Both Hafsatu and Sadiq sought therapy by the end of the book. Do you think therapy helps, especially in the society we live in?",
+        "How do you feel about how the book ended? Happy? Angry? Mixed emotions?",
+        "Who is your favorite character?",
+        "Would you want a man like Ibrahim and there really men like him?",
+      ];
+    </script>
+
+    <script src="../script.js"></script>
+  </body>
+</html>
