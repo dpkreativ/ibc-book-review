@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="../tibc_logo.png" />
+    <title>Abyssinian Chronicles: Book Review</title>
+    <meta
+      name="description"
+      content="Review of Moses Isegawa's Abyssinian Chronicles, a riveting story of twentieth-century Africa, plus book club questions."
+    />
+    <meta
+      name="keywords"
+      content="Abyssinian Chronicles review, Moses Isegawa, Ugandan literature, African fiction, book club questions, Iroko Book Circle"
+    />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:title" content="Abyssinian Chronicles: Book Review" />
+    <meta
+      property="og:description"
+      content="A review of Moses Isegawa's epic Ugandan novel, with discussion questions."
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="The Iroko Book Circle" />
+    <meta property="og:image" content="book_photo.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Abyssinian Chronicles: Book Review" />
+    <meta
+      name="twitter:description"
+      content="Moses Isegawa's Abyssinian Chronicles review with book club discussion questions."
+    />
+    <meta name="twitter:image" content="book_photo.jpg" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;0,800;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Shared Styles -->
+    <link rel="stylesheet" href="../styles.css" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style type="text/tailwindcss">
+      @theme {
+        --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, "Helvetica Neue", Arial, sans-serif;
+        --font-serif: "Playfair Display", serif;
+      }
+
+      body {
+        font-family: var(--font-sans);
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: var(--font-serif);
+      }
+
+      /* Theme specific gradients for this book - Earthy tones to match cover */
+      .question-number {
+        @apply inline-block bg-gradient-to-br from-[#8b4513] to-[#45260a] text-white py-2 px-4 rounded-full text-sm font-semibold mb-6 shadow-md;
+      }
+
+      .question-text {
+        @apply text-3xl font-bold text-gray-800 mb-6 leading-snug;
+      }
+      
+      .book-accent {
+        color: #8b4513;
+      }
+    </style>
+  </head>
+  <body
+    class="text-white min-h-screen relative overflow-x-hidden antialiased leading-relaxed"
+  >
+    <!-- Background Image with Overlay -->
+    <div class="fixed inset-0 z-[-1]">
+      <div
+        class="absolute inset-0 bg-[url('book_photo.jpg')] bg-fixed bg-center bg-cover"
+      ></div>
+      <div class="absolute inset-0 bg-black/70 backdrop-blur-[10px]"></div>
+    </div>
+
+    <!-- Floating Shapes -->
+    <div
+      class="fixed rounded-full opacity-10 pointer-events-none animate-float-random w-[100px] h-[100px] bg-white top-[10%] left-[5%]"
+    ></div>
+    <div
+      class="fixed rounded-full opacity-10 pointer-events-none animate-float-random w-[150px] h-[150px] bg-white bottom-[10%] right-[10%] [animation-delay:5s]"
+    ></div>
+
+    <header class="flex justify-start items-center py-6 px-8 relative z-10">
+      <!-- Back Arrow -->
+      <a
+        href="../"
+        class="flex items-center justify-center w-[50px] h-[50px] rounded-full bg-white text-[#1f1f1f] text-2xl no-underline shadow-md transition-all duration-300 ease-in-out hover:-translate-x-1 hover:shadow-lg"
+        aria-label="Back to Home"
+      >
+        ←
+      </a>
+
+      <!-- Logo -->
+      <a href="../" class="ml-16 block">
+        <img
+          class="p-2 rounded-2xl bg-white w-[90px] animate-float"
+          src="../tibc_logo.png"
+          alt="The Iroko Book Circle Logo"
+        />
+      </a>
+    </header>
+
+    <section
+      class="max-w-[1200px] mx-auto py-12 px-8 grid gap-12 items-center animate-fade-in grid-cols-1 md:grid-cols-2 text-center md:text-left"
+    >
+      <div class="md:order-1 order-2">
+        <h1
+          class="text-5xl md:text-6xl text-white mb-0 font-serif drop-shadow-[0_2px_10px_rgba(0,0,0,0.35)]"
+        >
+          Abyssinian Chronicles
+        </h1>
+        <h2
+          class="text-2xl font-normal italic text-white/90 mb-8 mt-2 font-serif"
+        >
+          <span class="italic">by</span> Moses Isegawa
+        </h2>
+
+        <div class="grid grid-cols-1 gap-8 items-center text-center md:text-left">
+          <p class="text-white/95 text-lg leading-relaxed mb-6">
+            Abyssinian Chronicles tells a riveting story of twentieth-century Africa that is passionate in vision and breathtaking in scope. At the center of this unforgettable tale is Mugezi, a young man who manages to make it through the hellish reign of Idi Amin and experiences firsthand the most crushing aspects of Ugandan society.
+          </p>
+          <p class="text-white/90 leading-relaxed italic border-l-4 border-[#8b4513] pl-6 py-2">
+            "A cri de coeur for a people shaped by untold losses."
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="flex justify-center items-center animate-slide-in-right md:justify-end md:order-2 order-1"
+      >
+        <div
+          class="w-full max-w-[380px] h-[550px] bg-gradient-to-br from-[#8b4513] to-[#2d1a0b] rounded-[20px] my-8 mx-auto shadow-2xl transition-transform duration-500 ease-in-out hover:scale-105"
+        >
+          <img
+            src="./book_photo.jpg"
+            alt="Abyssinian Chronicles Cover"
+            class="w-full h-full object-cover rounded-[20px]"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 px-8 max-w-[1400px] mx-auto w-full">
+      <h2 class="text-center text-5xl text-white mb-16 font-bold font-serif italic">
+        Discussion Questions
+      </h2>
+
+      <div
+        class="relative h-[480px] flex items-center justify-center perspective-[1200px]"
+      >
+        <div
+          class="relative w-full h-full flex items-center justify-center"
+          id="carouselTrack"
+        ></div>
+      </div>
+
+      <div class="flex justify-center gap-6 py-12">
+        <button
+          class="w-[70px] h-[70px] rounded-full bg-white border-none cursor-pointer flex items-center justify-center text-3xl transition-all duration-300 ease-in-out text-[#8b4513] hover:scale-110 hover:bg-gradient-to-br hover:from-[#8b4513] hover:to-[#45260a] hover:text-white active:scale-95 shadow-xl"
+          id="prevBtn"
+          aria-label="Previous question"
+        >
+          ←
+        </button>
+        <button
+          class="w-[70px] h-[70px] rounded-full bg-white border-none cursor-pointer flex items-center justify-center text-3xl transition-all duration-300 ease-in-out text-[#8b4513] hover:scale-110 hover:bg-gradient-to-br hover:from-[#8b4513] hover:to-[#45260a] hover:text-white active:scale-95 shadow-xl"
+          id="nextBtn"
+          aria-label="Next question"
+        >
+          →
+        </button>
+      </div>
+
+      <div
+        class="text-center text-white text-xl mt-6 font-medium tracking-widest opacity-80"
+        id="progressIndicator"
+      ></div>
+    </section>
+
+    <footer class="bg-black/40 backdrop-blur-md p-10 mt-16 text-center">
+      <div
+        class="inline-flex items-center justify-center w-12 h-12 bg-white rounded-xl font-bold text-[#8b4513] mb-4 shadow-lg"
+      >
+        <img
+          class="w-10 h-10 object-contain"
+          src="../tibc_logo.png"
+          alt="The Iroko Book Circle Logo"
+        />
+      </div>
+      <p class="text-white/80 text-sm tracking-wide">
+        © 2025 The Iroko Book Circle. Reflecting on African Stories.
+      </p>
+    </footer>
+
+    <script>
+      const questions = [
+        "If you had to describe this book in 3 words, what would they be?",
+        "Did you like or pity Mugezi? Was he a product of his environment or his own choices?",
+        "How did Mugezi’s relationship with his father shape the man he became? Does it encourage masculinity?",
+        "When the government is the main source of violence, do citizens have a moral duty to break the law to survive?",
+        "Is leaving your broken country betrayal or self preservation? What do you think Mugezi would do in 2026?",
+        "Some scenes feel like dreams or nightmares. Did that style work for you or distract you?",
+        "Morality bends when you’re hungry. What's your take on this quote looking at Nigeria's current political wars, fuel subsidy, banditry and electoral fraud?",
+        "From Mugezi’s mother to Serenity, how are women portrayed? Did any of them feel fully developed?",
+        "Which moment, line, or image from the book is still stuck in your head?",
+        "Would you recommend this book? Who should read it and who should avoid it?"
+      ];
+    </script>
+
+    <script src="../script.js"></script>
+  </body>
+</html>
