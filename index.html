@@ -58,6 +58,19 @@
         min-height: 100vh;
       }
 
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background-image: url("./tribal_art.png");
+        background-repeat: repeat;
+        background-size: auto;
+        background-position: top center;
+        opacity: 0.03;
+        pointer-events: none;
+        z-index: -1;
+      }
+
       h1,
       h2,
       h3,
@@ -66,6 +79,12 @@
       h6,
       .font-serif {
         font-family: var(--font-serif);
+      }
+
+      #siteHeader.scrolled {
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        background-color: rgba(226, 223, 208, 0.7);
       }
     </style>
   </head>
@@ -81,24 +100,35 @@
       class="fixed rounded-full opacity-10 pointer-events-none animate-float-random w-[80px] h-[80px] bg-white top-[50%] right-[5%] [animation-delay:10s]"
     ></div>
 
-    <header class="flex justify-start items-center py-6 px-8">
-      <img
-        class="mt-4 p-2 rounded-2xl bg-white w-[90px] animate-float"
-        src="./tibc_logo.png"
-        alt="Iroko Logo"
-      />
-
-      <div class="ml-4">
-        <h1 class="text-4xl text-black font-bold">The Iroko Circle</h1>
-        <h2 class="text-black/60 text-xl mt-2 font-semibold">Book Reviews</h2>
+    <header
+      id="siteHeader"
+      class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+    >
+      <div class="max-w-[1200px] mx-auto p-4 flex flex-col items-center">
+        <h1 class="text-2xl text-black font-bold">Book Reviews</h1>
+        <div class="flex items-center gap-2 mt-1">
+          <img
+            class="rounded-sm p-0.5 bg-white w-[24px]"
+            src="./tibc_logo.png"
+            alt="Iroko Logo"
+          />
+          <h2 class="text-black/60 text-lg font-semibold">The Iroko Circle</h2>
+        </div>
       </div>
     </header>
 
-    <main class="max-w-[1200px] mx-auto lg:p-8 p-4">
+    <main class="max-w-[1200px] mx-auto p-4 pt-30">
+      <div class="flex justify-center mb-8">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search by title or author..."
+          class="px-4 py-2 rounded-full border border-black/20 bg-white/80 text-black placeholder-black/40 text-sm focus:outline-none focus:ring-2 focus:ring-black/20 w-[280px] md:w-[400px]"
+        />
+      </div>
       <div
-        class="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] max-[375px]:grid-cols-1 gap-8 py-8 animate-fade-in"
+        class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 py-8 animate-fade-in"
       >
-        <!-- Most Recent: Murder at Cape Three Points -->
         <a
           href="./murder-at-cape-three-points/"
           class="group rounded-[36px] overflow-hidden no-underline text-inherit flex flex-col h-[500px] max-[375px]:h-[420px] transition-all duration-300 ease-in-out hover:-translate-y-1 shadow-[0_20px_50px_rgba(0,0,0,0.25)] relative"
@@ -133,9 +163,7 @@
             >
               Murder at Cape Three Points
             </h2>
-            <p class="text-white/75 text-sm md:text-base">
-              Kwei Quartey
-            </p>
+            <p class="text-white/75 text-sm md:text-base">Kwei Quartey</p>
             <span
               class="w-full h-14 flex items-center justify-center bg-white text-black font-bold rounded-full text-sm transition-all duration-300 ease-in-out group-hover:scale-105 group-hover:bg-gray-100"
               >Review Book</span
@@ -178,9 +206,7 @@
             >
               My Life as a Chameleon
             </h2>
-            <p class="text-white/75 text-sm md:text-base">
-              Diana Anyakwo
-            </p>
+            <p class="text-white/75 text-sm md:text-base">Diana Anyakwo</p>
             <span
               class="w-full h-14 flex items-center justify-center bg-white text-black font-bold rounded-full text-sm transition-all duration-300 ease-in-out group-hover:scale-105 group-hover:bg-gray-100"
               >Review Book</span
@@ -219,9 +245,7 @@
             >
               Abyssinian Chronicles
             </h2>
-            <p class="text-white/75 text-sm md:text-base">
-              Moses Isegawa
-            </p>
+            <p class="text-white/75 text-sm md:text-base">Moses Isegawa</p>
             <span
               class="w-full h-14 flex items-center justify-center bg-white text-black font-bold rounded-full text-sm transition-all duration-300 ease-in-out group-hover:scale-105 group-hover:bg-gray-100"
               >Review Book</span
@@ -260,9 +284,7 @@
             >
               Hafsatu Bebi
             </h2>
-            <p class="text-white/75 text-sm md:text-base">
-              Fatima Bala
-            </p>
+            <p class="text-white/75 text-sm md:text-base">Fatima Bala</p>
             <span
               class="w-full h-14 flex items-center justify-center bg-white text-black font-bold rounded-full text-sm transition-all duration-300 ease-in-out group-hover:scale-105 group-hover:bg-gray-100"
               >Review Book</span
@@ -342,9 +364,7 @@
             >
               The River and The Source
             </h2>
-            <p class="text-white/75 text-sm md:text-base">
-              Margaret A Ogola
-            </p>
+            <p class="text-white/75 text-sm md:text-base">Margaret A Ogola</p>
             <span
               class="w-full h-14 flex items-center justify-center bg-white text-black font-bold rounded-full text-sm transition-all duration-300 ease-in-out group-hover:scale-105 group-hover:bg-gray-100"
               >Review Book</span
@@ -383,9 +403,7 @@
             >
               Kill Me Quick
             </h2>
-            <p class="text-white/75 text-sm md:text-base">
-              Meja Mwangi
-            </p>
+            <p class="text-white/75 text-sm md:text-base">Meja Mwangi</p>
             <span
               class="w-full h-14 flex items-center justify-center bg-white text-black font-bold rounded-full text-sm transition-all duration-300 ease-in-out group-hover:scale-105 group-hover:bg-gray-100"
               >Review Book</span
@@ -424,9 +442,7 @@
             >
               The Smart Money Woman
             </h2>
-            <p class="text-white/75 text-sm md:text-base">
-              Arese Ugwu
-            </p>
+            <p class="text-white/75 text-sm md:text-base">Arese Ugwu</p>
             <span
               class="w-full h-14 flex items-center justify-center bg-white text-black font-bold rounded-full text-sm transition-all duration-300 ease-in-out group-hover:scale-105 group-hover:bg-gray-100"
               >Review Book</span
@@ -547,9 +563,7 @@
             >
               Sweet Medicine
             </h2>
-            <p class="text-white/75 text-sm md:text-base">
-              Panashe Chigumadzi
-            </p>
+            <p class="text-white/75 text-sm md:text-base">Panashe Chigumadzi</p>
             <span
               class="w-full h-14 flex items-center justify-center bg-white text-black font-bold rounded-full text-sm transition-all duration-300 ease-in-out group-hover:scale-105 group-hover:bg-gray-100"
               >Review Book</span
@@ -558,6 +572,29 @@
         </a>
       </div>
     </main>
+
+    <script>
+      window.addEventListener("scroll", () => {
+        document
+          .getElementById("siteHeader")
+          .classList.toggle("scrolled", window.scrollY > 10);
+      });
+    </script>
+    <script>
+      document
+        .getElementById("searchInput")
+        .addEventListener("input", function () {
+          const q = this.value.toLowerCase().trim();
+          document.querySelectorAll(".grid > a").forEach((card) => {
+            const title =
+              card.querySelector("h2")?.textContent.toLowerCase() || "";
+            const author =
+              card.querySelector("p")?.textContent.toLowerCase() || "";
+            card.style.display =
+              !q || title.includes(q) || author.includes(q) ? "" : "none";
+          });
+        });
+    </script>
 
     <footer
       class="bg-black/20 backdrop-blur-md p-8 mt-16 text-center max-[768px]:mt-0"
