@@ -34,7 +34,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;0,800;1,400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap"
       rel="stylesheet"
     />
 
@@ -46,10 +46,8 @@
 
     <style type="text/tailwindcss">
       @theme {
-        --font-sans:
-          "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-          "Helvetica Neue", Arial, sans-serif;
-        --font-serif: "Playfair Display", serif;
+        --font-sans: "Lato", sans-serif;
+        --font-serif: "Lato", sans-serif;
       }
 
       body {
@@ -128,9 +126,9 @@
           Abyssinian Chronicles
         </h1>
         <h2
-          class="text-2xl font-normal italic text-white/90 mb-8 mt-2 font-serif"
+          class="text-2xl font-normal text-white/90 mb-8 mt-2 font-serif"
         >
-          <span class="italic">by</span> Moses Isegawa
+          Moses Isegawa
         </h2>
 
         <div
@@ -144,7 +142,7 @@
             experiences firsthand the most crushing aspects of Ugandan society.
           </p>
           <p
-            class="text-white/90 leading-relaxed italic border-l-4 border-[#8b4513] pl-6 py-2"
+            class="text-white/90 leading-relaxed border-l-4 border-[#8b4513] pl-6 py-2"
           >
             "A cri de coeur for a people shaped by untold losses."
           </p>
@@ -168,7 +166,7 @@
 
     <section class="py-16 px-8 max-w-[1400px] mx-auto w-full">
       <h2
-        class="text-center text-5xl text-white mb-16 font-bold font-serif italic"
+        class="text-center text-5xl text-white mb-16 font-bold font-serif"
       >
         Discussion Questions
       </h2>
@@ -180,24 +178,23 @@
           class="relative w-full h-full flex items-center justify-center"
           id="carouselTrack"
         ></div>
-      </div>
-
-      <div class="flex justify-center gap-6 py-12">
+      
         <button
-          class="w-[70px] h-[70px] rounded-full bg-white border-none cursor-pointer flex items-center justify-center text-3xl transition-all duration-300 ease-in-out text-[#8b4513] hover:scale-110 hover:bg-gradient-to-br hover:from-[#8b4513] hover:to-[#45260a] hover:text-white active:scale-95 shadow-xl"
+          class="absolute left-2 right-2 md:left-4 md:right-4 top-1/2 -translate-y-1/2 z-20 w-[70px] h-[70px] rounded-full bg-white border-none cursor-pointer flex items-center justify-center text-3xl transition-all duration-300 ease-in-out text-[#8b4513] hover:scale-110 hover:bg-gradient-to-br hover:from-[#8b4513] hover:to-[#45260a] hover:text-white active:scale-95 shadow-xl"
           id="prevBtn"
           aria-label="Previous question"
         >
           ←
         </button>
         <button
-          class="w-[70px] h-[70px] rounded-full bg-white border-none cursor-pointer flex items-center justify-center text-3xl transition-all duration-300 ease-in-out text-[#8b4513] hover:scale-110 hover:bg-gradient-to-br hover:from-[#8b4513] hover:to-[#45260a] hover:text-white active:scale-95 shadow-xl"
+          class="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-[70px] h-[70px] rounded-full bg-white border-none cursor-pointer flex items-center justify-center text-3xl transition-all duration-300 ease-in-out text-[#8b4513] hover:scale-110 hover:bg-gradient-to-br hover:from-[#8b4513] hover:to-[#45260a] hover:text-white active:scale-95 shadow-xl"
           id="nextBtn"
           aria-label="Next question"
         >
           →
         </button>
       </div>
+
 
       <div
         class="text-center text-white text-xl mt-6 font-medium tracking-widest opacity-80"

@@ -34,7 +34,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;0,800;1,400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap"
       rel="stylesheet"
     />
 
@@ -46,10 +46,8 @@
 
     <style type="text/tailwindcss">
       @theme {
-        --font-sans:
-          "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-          "Helvetica Neue", Arial, sans-serif;
-        --font-serif: "Playfair Display", serif;
+        --font-sans: "Lato", sans-serif;
+        --font-serif: "Lato", sans-serif;
       }
 
       body {
@@ -126,8 +124,8 @@
         >
           Hafsatu Bebi
         </h1>
-        <h2 class="text-2xl font-normal italic text-lime-400 mb-8 font-serif">
-          <span class="italic text-white/80">by</span> Fatima Bala
+        <h2 class="text-2xl font-normal text-lime-400 mb-8 font-serif">
+          Fatima Bala
         </h2>
 
         <div
@@ -174,24 +172,23 @@
           class="relative w-full h-full flex items-center justify-center"
           id="carouselTrack"
         ></div>
-      </div>
-
-      <div class="flex justify-center gap-6 py-12">
+      
         <button
-          class="w-[60px] h-[60px] rounded-full bg-white border-none cursor-pointer flex items-center justify-center text-2xl transition-all duration-300 ease-in-out text-emerald-900 hover:scale-110 hover:bg-lime-500 hover:text-white active:scale-95 shadow-xl"
+          class="absolute -left-4 md:left-4 top-1/2 -translate-y-1/2 z-20 w-[60px] h-[60px] rounded-full bg-white border-none cursor-pointer flex items-center justify-center text-2xl transition-all duration-300 ease-in-out text-emerald-900 hover:scale-110 hover:bg-lime-500 hover:text-white active:scale-95 shadow-xl"
           id="prevBtn"
           aria-label="Previous question"
         >
           ←
         </button>
         <button
-          class="w-[60px] h-[60px] rounded-full bg-white border-none cursor-pointer flex items-center justify-center text-2xl transition-all duration-300 ease-in-out text-emerald-900 hover:scale-110 hover:bg-lime-500 hover:text-white active:scale-95 shadow-xl"
+          class="absolute -right-4 md:right-4 top-1/2 -translate-y-1/2 z-20 w-[60px] h-[60px] rounded-full bg-white border-none cursor-pointer flex items-center justify-center text-2xl transition-all duration-300 ease-in-out text-emerald-900 hover:scale-110 hover:bg-lime-500 hover:text-white active:scale-95 shadow-xl"
           id="nextBtn"
           aria-label="Next question"
         >
           →
         </button>
       </div>
+
 
       <div
         class="text-center text-white text-lg mt-6 font-medium"

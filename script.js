@@ -1,17 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Populate Carousel
   const track = document.getElementById("carouselTrack");
   const indicator = document.getElementById("progressIndicator");
 
-  // Check if questions array exists and carousel track is present
   if (typeof questions !== "undefined" && track && questions.length > 0) {
-    // Clear existing content just in case
     track.innerHTML = "";
 
     questions.forEach((q, index) => {
       const card = document.createElement("div");
       card.className = `question-card`;
-      // Initial classes for positioning
       if (index === 0) card.classList.add("active");
       if (index === 1) card.classList.add("next");
 
@@ -58,8 +54,13 @@ function setupCarouselNavigation() {
     if (prevBtn) {
       prevBtn.style.display = index === 0 ? "none" : "flex";
     }
+
     if (nextBtn) {
-      nextBtn.style.display = index === cards.length - 1 ? "none" : "flex";
+      if (index === cards.length - 1) {
+        nextBtn.innerHTML = "&#x21bb;";
+      } else {
+        nextBtn.innerHTML = "→";
+      }
     }
   }
 
@@ -74,24 +75,28 @@ function setupCarouselNavigation() {
 
   if (nextBtn) {
     nextBtn.addEventListener("click", () => {
-      if (currentIndex < cards.length - 1) {
+      if (currentIndex === cards.length - 1) {
+        currentIndex = 0;
+      } else {
         currentIndex++;
-        updateCards();
       }
+      updateCards();
     });
   }
 
-  // Keyboard navigation
   document.addEventListener("keydown", (e) => {
     if (e.key === "ArrowLeft" && currentIndex > 0) {
       currentIndex--;
       updateCards();
-    } else if (e.key === "ArrowRight" && currentIndex < cards.length - 1) {
-      currentIndex++;
+    } else if (e.key === "ArrowRight") {
+      if (currentIndex === cards.length - 1) {
+        currentIndex = 0;
+      } else {
+        currentIndex++;
+      }
       updateCards();
     }
   });
 
-  // Initial progress update
   updateProgress(0);
 }
