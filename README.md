@@ -1,11 +1,13 @@
 # The Iroko Circle
 
-A curated collection of book reviews and discussion questions for African literature — spanning Nigeria, Kenya, Ghana, Uganda, Zimbabwe, and beyond. Each review includes a synopsis and an interactive carousel of book-club-style discussion questions.
+A curated collection of book reviews and discussion questions for African literature — spanning Nigeria, Kenya, Ghana, Uganda, Zimbabwe, and beyond. Each review includes a synopsis and an interactive carousel of discussion questions.
 
 ## Features
 
-- **Book review pages** with synopsis, cover art, and discussion questions
-- **Interactive question carousel** with keyboard navigation
+- **Book review pages** with synopsis, cover art, genre tags, and discussion questions
+- **Interactive question carousel** with keyboard navigation and staggered text animations
+- **Staggered heading animation** on load (GSAP)
+- **Floating back button** that stays visible while scrolling
 - **Search & filter** books by title or author
 - **Responsive design** built with Tailwind CSS v4
 - **Clean, readable typography** (Lato)
@@ -14,6 +16,7 @@ A curated collection of book reviews and discussion questions for African litera
 
 | Title | Author |
 |---|---|
+| Bitter Honey | Lolá Ákínmádé |
 | Sweet Medicine | Panashe Chigumadzi |
 | Sugar Daddy Chronicles: Lewa | Tomilola Coco Adeyemo |
 | Tiny Things Are Heavier | Esther Ifesinachi Okonkwo |
@@ -30,6 +33,7 @@ A curated collection of book reviews and discussion questions for African litera
 
 - **HTML5** — semantic markup with SEO/OG/Twitter metadata
 - **Tailwind CSS v4** — utility-first styling (loaded via CDN)
+- **GSAP** — heading text animation
 - **Vanilla JavaScript** — carousel navigation, search filtering
 - **Google Fonts** — Lato
 
