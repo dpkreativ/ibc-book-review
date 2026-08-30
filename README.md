@@ -16,6 +16,7 @@ A curated collection of book reviews and discussion questions for African litera
 
 | Title | Author |
 |---|---|
+| A Kind of Madness | Uche Okonkwo |
 | Bitter Honey | Lolá Ákínmádé |
 | Sweet Medicine | Panashe Chigumadzi |
 | Sugar Daddy Chronicles: Lewa | Tomilola Coco Adeyemo |
