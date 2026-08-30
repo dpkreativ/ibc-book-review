@@ -11,9 +11,22 @@ document.addEventListener("DOMContentLoaded", () => {
       if (index === 0) card.classList.add("active");
       if (index === 1) card.classList.add("next");
 
+      let questionText = q;
+      let sourceHtml = "";
+
+      if (typeof q === "object" && q !== null) {
+        questionText = q.text || q.question;
+        if (q.source) {
+          sourceHtml = `<span class="question-source text-sm md:text-base font-normal text-gray-600">${q.source}</span>`;
+        }
+      }
+
       card.innerHTML = `
-                <span class="question-number">Question ${index + 1}</span>
-                <p class="question-text">${q}</p>
+                <div class="flex items-center justify-between flex-wrap gap-2 mb-6">
+                  <span class="question-number !mb-0">Question ${index + 1}</span>
+                  ${sourceHtml}
+                </div>
+                <p class="question-text">${questionText}</p>
             `;
 
       track.appendChild(card);
