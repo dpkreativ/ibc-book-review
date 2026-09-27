@@ -16,6 +16,7 @@ A curated collection of book reviews and discussion questions for African litera
 
 | Title | Author |
 |---|---|
+| This September Sun | Bryony Rheam |
 | A Kind of Madness | Uche Okonkwo |
 | Bitter Honey | Lolá Ákínmádé |
 | Sweet Medicine | Panashe Chigumadzi |
